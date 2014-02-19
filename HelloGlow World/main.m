@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GlowAct.h"
+#import "City.h"
 
 int main(int argc, const char * argv[])
 {
@@ -14,7 +16,17 @@ int main(int argc, const char * argv[])
     @autoreleasepool {
         
         // insert code here...
-        NSLog(@"Hello, World!");
+        GlowAct* blueLightAct = [GlowAct alloc];
+        [blueLightAct setValue:@"Blue Light Act" forKey:@"name"];
+        [blueLightAct setValue:@"22:20" forKey:@"startTime"];
+        [blueLightAct setValue:@"8" forKey:@"rating"];
+        [blueLightAct showInfo];
+        
+        City* city = [City alloc];
+        [city setValue:@"Eindhoven" forKey:@"name"];
+        [city setValue:@"220000" forKey:@"population"];
+        [city showInfo];
+        
         
     }
     return 0;
