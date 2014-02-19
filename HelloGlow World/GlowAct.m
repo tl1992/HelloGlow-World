@@ -9,7 +9,7 @@
 #import "GlowAct.h"
 
 @implementation GlowAct
--(void) showInfo{
+-(void) showInfo :(NSString *)name :(NSString *)startTime :(NSInteger)rating {
 NSLog(@"The act is called %@ and will start at %@. People give it a rating of %ld", name,startTime,rating);
 }
 @end

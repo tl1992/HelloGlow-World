@@ -10,10 +10,12 @@
 
 @interface GlowAct : NSObject
 {
-    NSString *name;
-    NSInteger rating;
-    NSString *startTime;
+
     
 }
-- (void) showInfo;
+@property NSString *name;
+@property NSInteger rating;
+@property NSString *startTime;
+
+- (void) showInfo: (NSString *)name :(NSString *)startTime :(NSInteger) rating;
 @end

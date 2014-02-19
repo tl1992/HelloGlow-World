@@ -15,17 +15,29 @@ int main(int argc, const char * argv[])
 
     @autoreleasepool {
         
-        // insert code here...
-        GlowAct* blueLightAct = [GlowAct alloc];
-        [blueLightAct setValue:@"Blue Light Act" forKey:@"name"];
-        [blueLightAct setValue:@"22:20" forKey:@"startTime"];
-        [blueLightAct setValue:@"8" forKey:@"rating"];
-        [blueLightAct showInfo];
         
-        City* city = [City alloc];
-        [city setValue:@"Eindhoven" forKey:@"name"];
-        [city setValue:@"220000" forKey:@"population"];
-        [city showInfo];
+        GlowAct *blueLightAct = [GlowAct alloc];
+        blueLightAct.name = @"The Bluelight act";
+        blueLightAct.startTime = @"22:00";
+        blueLightAct.rating = 8;
+        
+        GlowAct *otherAct = [GlowAct alloc];
+        otherAct.name = @"The other act";
+        otherAct.startTime = @"22:30";
+        otherAct.rating = 9;
+        
+        [blueLightAct showInfo:blueLightAct.name :blueLightAct.startTime :blueLightAct.rating];
+        
+        City *ehv = [City alloc];
+        ehv.name = @"Eindhoven";
+        ehv.population = 22000;
+
+        ehv = [ehv init];
+        
+        [ehv.glowActs addObject:blueLightAct];
+        [ehv.glowActs addObject:otherAct];
+        
+        [ehv showInfo:ehv.name :ehv.population];
         
         
     }

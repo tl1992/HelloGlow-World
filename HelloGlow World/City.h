@@ -10,9 +10,13 @@
 
 @interface City : NSObject
 {
-    NSString *name;
-    NSInteger population;
-    NSMutableArray *glowActs;
+
 }
-- (void) showInfo;
+    @property NSString *name;
+    @property NSInteger population;
+    @property NSUInteger acts;
+    @property NSMutableArray *glowActs;
+
+- (void) showInfo: (NSString *)name : (NSInteger) population;
+-(id) init;
 @end
